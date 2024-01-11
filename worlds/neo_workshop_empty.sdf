@@ -1,24 +1,6 @@
-<sdf version='1.7'>
+<sdf version='1.9'>
   <world name='default'>
-   <light name='sun' type='directional'>
-      <cast_shadows>1</cast_shadows>
-      <pose>0 0 10 0 -0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.2 0.2 0.2 1</specular>
-      <attenuation>
-        <range>1000</range>
-        <constant>0.9</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-      <direction>-0.5 0.5 -1</direction>
-      <spot>
-        <inner_angle>0</inner_angle>
-        <outer_angle>0</outer_angle>
-        <falloff>0</falloff>
-      </spot>
-    </light>
-   <physics name='1ms' type='ignored'>
+    <physics name='1ms' type='ignored'>
       <max_step_size>0.01</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>100</real_time_update_rate>
@@ -35,6 +17,9 @@
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
     </scene>
+    <audio>
+      <device>default</device>
+    </audio>
     <model name='ground_plane'>
       <static>true</static>
       <link name='link'>
@@ -61,9 +46,9 @@
             </plane>
           </geometry>
           <material>
-            <ambient>0.8 0.8 0.8 1</ambient>
-            <diffuse>0.8 0.8 0.8 1</diffuse>
-            <specular>0.8 0.8 0.8 1</specular>
+            <ambient>0.133 0.188 0.4 1</ambient>
+            <diffuse>0.133 0.188 0.4 1</diffuse>
+            <specular>0.133 0.188 0.4 1</specular>
           </material>
         </visual>
         <pose>0 0 0 0 -0 0</pose>
@@ -85,7 +70,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='office_env_w2'>
-      <pose>0 4.162 1.25 0 -0 0</pose>
+      <pose>0 4.95791 1.25 0 -0 0</pose>
       <link name='Wall_10'>
         <pose>0 0 0 0 -0 0</pose>
         <visual name='Wall_10_Visual_0'>
@@ -96,9 +81,10 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -125,14 +111,27 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
     <model name='office_env_w'>
-      <pose>5.733 0 1.25 0 -0 1.57</pose>
+      <pose>5.73367 0.847832 1.25 0 -0 1.57</pose>
       <link name='Wall_10'>
         <pose>0 0 0 0 -0 0</pose>
         <visual name='Wall_10_Visual_0'>
@@ -143,9 +142,10 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -172,14 +172,27 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
     <model name='office_env_w3'>
-        <pose>2.8655 -4.162 1.25 0 -0 0</pose>
+      <pose>2.8655 -4.162 1.25 0 -0 0</pose>
       <link name='Wall_10'>
         <pose>0 0 0 0 -0 0</pose>
         <visual name='Wall_10_Visual_0'>
@@ -190,9 +203,10 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -219,14 +233,27 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
     <model name='office_env_w3_clone'>
-     <pose>-0.116895 -6.96099 1.25 0 -0 1.57</pose>
+      <pose>-0.116895 -6.96099 1.25 0 -0 1.57</pose>
       <link name='Wall_10'>
         <pose>0 0 0 0 -0 0</pose>
         <visual name='Wall_10_Visual_0'>
@@ -237,9 +264,9 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+            <ambient>0.961 0.62 0 1</ambient>
+            <diffuse>0.961 0.62 0 1</diffuse>
+            <specular>0.961 0.62 0 1</specular>
           </material>
           <meta>
             <layer>0</layer>
@@ -266,14 +293,27 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
     <model name='office_env_w_clone'>
-      <pose>-5.82948 0.079903 1.25 0 -0 1.57</pose>
+      <pose>-5.82885 0.866541 1.25 0 -0 1.57</pose>
       <link name='Wall_10'>
         <pose>0 0 0 0 -0 0</pose>
         <visual name='Wall_10_Visual_0'>
@@ -284,9 +324,10 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -313,14 +354,27 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
     <model name='office_env_w3_clone_clone'>
-      <pose>-5.82704 -6.96526 1.25 0 -0 1.57</pose>
+      <pose>-5.82695 -6.85682 1.25 0 -0 1.57</pose>
       <link name='Wall_10'>
         <pose>0 0 0 0 -0 0</pose>
         <visual name='Wall_10_Visual_0'>
@@ -331,9 +385,10 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -360,11 +415,24 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
     <model name='office_env_w3_clone_0'>
       <pose>-2.96341 -9.9742 1.25 0 -0 0</pose>
@@ -378,9 +446,10 @@
             </box>
           </geometry>
           <material>
-	  <ambient>0.2 0.2 0.2 1</ambient>
-	  <diffuse>1.0 1.0 1.0 1</diffuse>
-	  <specular>1.0 1.0 1.0 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -407,21 +476,61 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
       </link>
-      <static>1</static>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
-    <model name='Construction Cone_clone_clone'>
-      <link name='link'>
-        <collision name='collision'>
+    <model name='construction_cone'>
+      <include>
+            <uri>model://construction_cone</uri>
+      </include>
+      <pose>-3.16254 -4.5019 -0.000817 0 -0 0</pose>
+ 
+    </model>
+
+    <model name='office_env_w_1'>
+      <pose>5.73307 0.08924 1.25 0 -0 1.57</pose>
+      <link name='Wall_10'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='Wall_10_Visual_0'>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
-            </mesh>
+            <box>
+              <size>8.324 0.15 2.5</size>
+            </box>
           </geometry>
+          <material>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <collision name='Wall_10_Collision_0'>
+          <geometry>
+            <box>
+              <size>8.324 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 0 0 -0 0</pose>
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
@@ -436,17 +545,12 @@
             </friction>
           </surface>
         </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
           <inertia>
             <ixx>1</ixx>
             <ixy>0</ixy>
@@ -455,16 +559,91 @@
             <iyz>0</iyz>
             <izz>1</izz>
           </inertia>
-          <mass>1</mass>
         </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
       </link>
-      <pose>-3.16254 -4.5019 -0.00088 0 -0 0</pose>
+      <static>true</static>
+      <self_collide>false</self_collide>
     </model>
-    <audio>
-      <device>default</device>
-    </audio>
+    <model name='office_env_w_clone_1'>
+      <pose>-5.82948 0.079903 1.25 0 -0 1.57</pose>
+      <link name='Wall_10'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='Wall_10_Visual_0'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>8.324 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
 
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <collision name='Wall_10_Collision_0'>
+          <geometry>
+            <box>
+              <size>8.324 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 0 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+        <kinematic>false</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+      </link>
+      <static>true</static>
+      <self_collide>false</self_collide>
+    </model>
+
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.5 -1</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
   </world>
 </sdf>

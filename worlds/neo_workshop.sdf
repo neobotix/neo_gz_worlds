@@ -46,9 +46,9 @@
             </plane>
           </geometry>
           <material>
-            <ambient>0.8 0.8 0.8 1</ambient>
-            <diffuse>0.8 0.8 0.8 1</diffuse>
-            <specular>0.8 0.8 0.8 1</specular>
+            <ambient>0.133 0.188 0.4 1</ambient>
+            <diffuse>0.133 0.188 0.4 1</diffuse>
+            <specular>0.133 0.188 0.4 1</specular>
           </material>
         </visual>
         <pose>0 0 0 0 -0 0</pose>
@@ -81,9 +81,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -141,9 +142,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -201,9 +203,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -261,9 +264,9 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+            <ambient>0.961 0.62 0 1</ambient>
+            <diffuse>0.961 0.62 0 1</diffuse>
+            <specular>0.961 0.62 0 1</specular>
           </material>
           <meta>
             <layer>0</layer>
@@ -321,9 +324,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -381,9 +385,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -441,9 +446,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -489,54 +495,10 @@
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
-    <model name='Construction Cone_clone_clone'>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>file:///home/pradheep/iron_ws/src/neo_simulation2/worlds/model://construction_cone/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>file:///home/pradheep/iron_ws/src/neo_simulation2/worlds/model://construction_cone/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>false</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>false</enable_wind>
-        <kinematic>false</kinematic>
-        <pose>0 0 0 0 -0 0</pose>
-      </link>
+    <model name='construction_cone'>
+      <include>
+            <uri>model://construction_cone</uri>
+      </include>
       <pose>-3.16254 -4.5019 -0.000817 0 -0 0</pose>
  
     </model>
@@ -544,7 +506,7 @@
       <include>
             <uri>model://neo_office_box</uri>
       </include>
-      <pose>3.9 2.13819 0.289901 0 -0 0</pose>
+      <pose>3.8441 2.13819 0.289901 0 -0 0</pose>
  
     </model>
     <model name='neobotix_box_2'>
@@ -599,7 +561,7 @@
     <model name='neobotix_box_3_2_2_1'>
       <include>
             <uri>model://neo_office_box</uri>
-    </include>
+      </include>
       <pose>3.17712 -1.52963 0.294325 0 -0 1.57</pose>
  
     </model>
@@ -740,55 +702,6 @@
  
     </model>
 
-    <model name='ground_plane_1'>
-      <static>true</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <material>
-            <ambient>0.8 0.8 0.8 1</ambient>
-            <diffuse>0.8 0.8 0.8 1</diffuse>
-            <specular>0.8 0.8 0.8 1</specular>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-0.115089 -1.42822 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
     <model name='neobotix_box_3_2_1_1_2_1'>
       <include>
             <uri>model://neo_office_box</uri>
@@ -906,9 +819,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
@@ -966,9 +880,10 @@
             </box>
           </geometry>
           <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
+               <ambient>0.961 0.62 0 1</ambient>
+              <diffuse>0.961 0.62 0 1</diffuse>
+             <specular>0.961 0.62 0 1</specular>
+
           </material>
           <meta>
             <layer>0</layer>
