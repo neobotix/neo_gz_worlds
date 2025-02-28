@@ -393,12 +393,12 @@
   <model name="neo_workshop_walls">
     <static>true</static>
     <link name="wall_link">
-      <pose>0 -4.3 0 0 -0 0</pose>
+      <pose>3 -4.04 0 0 0 0</pose>
       <visual name="wall_visual">
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <scale>2 2 2</scale>
+            <scale>1 1 1</scale>
             <uri>model://neo_workshop_walls/meshes/walls.dae</uri>
           </mesh>
         </geometry>
@@ -411,11 +411,11 @@
       <collision name="wall_collision">
         <geometry>
           <mesh>
-          <scale>2 2 2</scale>
+          <scale>1 1 1</scale>
             <uri>model://neo_workshop_walls/meshes/walls.dae</uri>
           </mesh>
         </geometry>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <max_contacts>10</max_contacts>
         <surface>
           <contact>
@@ -434,7 +434,7 @@
       <enable_wind>false</enable_wind>
       <kinematic>false</kinematic>
       <inertial>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <mass>1</mass>
         <inertia>
           <ixx>1</ixx>
