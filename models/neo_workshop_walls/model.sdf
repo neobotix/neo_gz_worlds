@@ -1,0 +1,27 @@
+<sdf version="1.6">
+  <model name="neo_workshop_walls">
+    <static>true</static>
+    <link name="wall_link">
+      <visual name="wall_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://neo_workshop_walls/meshes/walls.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://neo_workshop_walls/materials/textures/full_wall_texture.png</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name="wall_collision">
+        <geometry>
+          <mesh>
+            <uri>model://neo_workshop_walls/meshes/walls.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
