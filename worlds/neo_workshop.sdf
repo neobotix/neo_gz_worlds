@@ -447,7 +447,20 @@
       </inertial>
     </link>
   </model>
-
+    <model name='wallbox'>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/pradheep/jazzy_ws/src/neo_gz_worlds/models/neo_wall_box/meshes/wallbox.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-5.5157999992370605 1.0800000429153442 0.0099999997764825821 0 0 0</pose>
+      <static>true</static>
+    </model>
 
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
