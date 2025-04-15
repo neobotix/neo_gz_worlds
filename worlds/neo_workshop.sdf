@@ -452,7 +452,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/pradheep/jazzy_ws/src/neo_gz_worlds/models/neo_wall_box/meshes/wallbox.dae</uri>
+              <uri>model://neo_wall_box/meshes/wallbox.dae</uri>
             </mesh>
           </geometry>
         </visual>
